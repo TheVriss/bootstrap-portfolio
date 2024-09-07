@@ -59,13 +59,13 @@ h5 {
 .btn-primary {
   background-color: var(--primary-color) !important;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .btn-primary:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Navbar styles */
@@ -79,7 +79,7 @@ h5 {
 }
 
 .navbar-nav a:hover {
-  color: var(--background-color-dark);
+  color: var(--background-color-dark) !important;
 }
 
 /* Home section styles */
@@ -88,7 +88,7 @@ h5 {
 }
 
 .home-section h5 {
-  color: var(--primary-color-dark);
+  color: var(--primary-color-dark) !important;
   font-weight: bolder;
 }
 
@@ -120,7 +120,7 @@ h5 {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Skill box styles */
@@ -155,12 +155,12 @@ h5 {
   }
 }
 
-/* CSS */
+/* Button styles */
 .button-74 {
   background-color: #fbeee0;
   border: 2px solid #422800;
   border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
+  box-shadow: 4px 4px 0 #422800;
   color: #422800;
   cursor: pointer;
   display: inline-block;
@@ -171,8 +171,6 @@ h5 {
   text-align: center;
   text-decoration: none;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 .button-74:hover {
@@ -180,7 +178,7 @@ h5 {
 }
 
 .button-74:active {
-  box-shadow: #422800 2px 2px 0 0;
+  box-shadow: 2px 2px 0 #422800;
   transform: translate(2px, 2px);
 }
 
@@ -191,42 +189,36 @@ h5 {
   }
 }
 
-.glow-y {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow-y 1s ease-in-out infinite alternate;
-  -moz-animation: glow-y 1s ease-in-out infinite alternate;
-  animation: glow-y 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow-y {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffd700,
-      0 0 40px #ffd700, 0 0 50px #ffd700, 0 0 60px #ffd700, 0 0 70px #ffd700;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ffec8b, 0 0 40px #ffec8b,
-      0 0 50px #ffec8b, 0 0 60px #ffec8b, 0 0 70px #ffec8b, 0 0 80px #ffec8b;
-  }
-}
-
+/* Glow animations */
+.glow-y,
 .glow-b {
   font-size: 80px;
   color: #fff;
   text-align: center;
-  -webkit-animation: glow-b 1s ease-in-out infinite alternate;
-  -moz-animation: glow-b 1s ease-in-out infinite alternate;
-  animation: glow-b 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow-b {
+@keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00bfff,
-      0 0 40px #00bfff, 0 0 50px #00bfff, 0 0 60px #00bfff, 0 0 70px #00bfff;
+    text-shadow: 0 0 10px #fff, 0 0 20px var(--glow-color-start),
+      0 0 30px var(--glow-color-start), 0 0 40px var(--glow-color-start),
+      0 0 50px var(--glow-color-start), 0 0 60px var(--glow-color-start),
+      0 0 70px var(--glow-color-start);
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #1e90ff, 0 0 40px #1e90ff,
-      0 0 50px #1e90ff, 0 0 60px #1e90ff, 0 0 70px #1e90ff, 0 0 80px #1e90ff;
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--glow-color-end),
+      0 0 40px var(--glow-color-end), 0 0 50px var(--glow-color-end),
+      0 0 60px var(--glow-color-end), 0 0 70px var(--glow-color-end),
+      0 0 80px var(--glow-color-end);
   }
+}
+
+.glow-y {
+  --glow-color-start: #ffd700;
+  --glow-color-end: #ffec8b;
+}
+
+.glow-b {
+  --glow-color-start: #00bfff;
+  --glow-color-end: #1e90ff;
 }

@@ -1,0 +1,42 @@
+@import "/assets/css/variables.css";
+@import "/assets/css/utilities.css";
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.navbar {
+  background-color: rgba(245, 252, 255, 0.5); /* Đen với độ trong suốt 50% */
+  backdrop-filter: blur(10px); /* Làm mờ nền phía sau */
+}
+
+.home-section {
+  margin-top: 50px;
+}
+
+.box-skill img {
+  width: 100px;
+}
+
+.more-section {
+  background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(0, 0, 0, 0.01) 20px,
+      rgba(0, 0, 0, 0.1) 40px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      transparent,
+      transparent 20px,
+      rgba(0, 0, 0, 0.01) 20px,
+      rgba(0, 0, 0, 0.1) 40px
+    ),
+    linear-gradient(90deg, var(--primary-color-dark), var(--primary-color-dark)); /* Adjust the gradient colors as needed */
+  margin: 0;
+}

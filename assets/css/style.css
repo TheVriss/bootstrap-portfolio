@@ -1,5 +1,5 @@
-@import "/assets/css/variables.css";
-@import "/assets/css/utilities.css";
+@import "assets/css/variables.css";
+@import "assets/css/utilities.css";
 
 .header {
   position: fixed;

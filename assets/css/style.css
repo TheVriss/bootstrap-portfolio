@@ -1,5 +1,53 @@
-@import "assets/css/variables.css";
-@import "assets/css/utilities.css";
+:root {
+  --primary-color: #618cc7;
+  --primary-color-light: #7fa1c3;
+  --primary-color-dark: #58759c;
+  --secondary-color: #e2dad6;
+  --secondary-color-light: #f5eded;
+  --background-color: #d1e9f6;
+  --background-color-dark: #8bd6ff;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-primary-light {
+  color: var(--primary-color-light) !important;
+}
+
+.text-primary-dark {
+  color: var(--primary-color-dark) !important;
+}
+
+.bg-primary {
+  background-color: var(--background-color) !important;
+}
+
+.bg-primary-dark {
+  background-color: var(--background-color-dark) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.btn-primary-light {
+  background-color: var(--primary-color-light) !important;
+}
+
+.btn-primary-dark {
+  background-color: var(--primary-color-dark) !important;
+}
+
+.btn {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.section {
+  padding: 100px 0;
+}
 
 .header {
   position: fixed;

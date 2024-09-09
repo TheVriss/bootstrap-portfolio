@@ -98,7 +98,7 @@ h5 {
 }
 
 .home-section .img-profile {
-  animation: spinAround 4s infinite;
+  width: 30rem;
 }
 
 /* Image animation */
@@ -146,13 +146,6 @@ h5 {
     ),
     linear-gradient(90deg, var(--primary-color-dark), var(--primary-color-dark));
   margin: 0;
-}
-
-/* Animation */
-@keyframes spinAround {
-  50% {
-    transform: scale(0.5);
-  }
 }
 
 /* Button styles */
